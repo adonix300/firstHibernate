@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Danis Abdulgazizov
+      changes:
+        - createTable:
+            schemaName: hibernate
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    primaryKey: true

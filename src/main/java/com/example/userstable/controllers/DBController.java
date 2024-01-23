@@ -19,6 +19,6 @@ public class DBController {
 
     @GetMapping("/persons/by-city")
     List<Person> getPersonsByCity(@Validated City city) {
-        return repository.getPersonsByCity(city.getCityName());
+        return repository.getPersonsByCity(city.getName());
     }
 }

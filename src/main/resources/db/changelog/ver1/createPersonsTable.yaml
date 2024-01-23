@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Danis Abdulgazizov
+      changes:
+        - createTable:
+            schemaName: hibernate
+            tableName: persons
+            columns:
+              - column:
+                  name: name
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: surname
+                  type: varchar(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone_number
+                  type: varchar(13)
+              - column:
+                  name: city
+                  type: varchar
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_persons_city
+                    references: cities(name)
+        - addPrimaryKey:
+            schemaName: hibernate
+            tableName: persons
+            columnNames: name, surname, age
+            constraintName: pk_persons

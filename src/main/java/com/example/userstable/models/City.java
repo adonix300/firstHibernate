@@ -1,6 +1,7 @@
 package com.example.userstable.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -16,9 +17,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(schema = "hibernate")
+@Table(schema = "hibernate", name = "cities")
 public class City implements Serializable {
     @Id
     @JsonProperty("name")
-    private String cityName;
+    private String name;
 }

@@ -11,13 +11,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(schema = "hibernate")
+@Table(schema = "hibernate", name = "persons")
 public class Person {
     @EmbeddedId
     private Contact contact;
     @Column(length = 13)
     private String phone_number;
     @ManyToOne(optional = false)
+    @JoinColumn(name = "city")
     private City city;
 
     @Override

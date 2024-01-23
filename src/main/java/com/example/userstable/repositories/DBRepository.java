@@ -17,8 +17,8 @@ public class DBRepository {
 
     public List<Person> getPersonsByCity(String city) {
         TypedQuery<Person> query = entityManager.createQuery(
-                "from Person where city.cityName= :cityName", Person.class);
-        query.setParameter("cityName", city);
+                "from Person where city.name = :name", Person.class);
+        query.setParameter("name", city);
         return query.getResultList();
     }
 }

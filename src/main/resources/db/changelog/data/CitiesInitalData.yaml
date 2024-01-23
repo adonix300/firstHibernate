@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Danis Abdulgazizov
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: Moscow
+  - changeSet:
+      id: 4
+      author: Danis Abdulgazizov
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: Saint Petersburg
+  - changeSet:
+      id: 5
+      author: Danis Abdulgazizov
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: Novosibirsk
+  - changeSet:
+      id: 6
+      author: Danis Abdulgazizov
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: Yekaterinburg
+  - changeSet:
+      id: 7
+      author: Danis Abdulgazizov
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: name
+                  value: Kazan
