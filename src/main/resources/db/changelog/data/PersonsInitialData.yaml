@@ -20,7 +20,7 @@ databaseChangeLog:
                   name: phone_number
                   value: +79227773344
               - column:
-                  name: city
+                  name: city_name
                   value: Moscow
   - changeSet:
       id: 9
@@ -43,7 +43,7 @@ databaseChangeLog:
                   name: phone_number
                   value: +79227773344
               - column:
-                  name: city
+                  name: city_name
                   value: Moscow
   - changeSet:
       id: 10
@@ -66,7 +66,7 @@ databaseChangeLog:
                   name: phone_number
                   value: +79227773344
               - column:
-                  name: city
+                  name: city_name
                   value: Kazan
   - changeSet:
       id: 11
@@ -89,5 +89,5 @@ databaseChangeLog:
                   name: phone_number
                   value: +79227773344
               - column:
-                  name: city
+                  name: city_name
                   value: Novosibirsk

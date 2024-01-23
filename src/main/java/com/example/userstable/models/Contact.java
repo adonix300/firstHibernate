@@ -1,5 +1,6 @@
 package com.example.userstable.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -16,12 +17,15 @@ import java.io.Serializable;
 @Embeddable
 public class Contact implements Serializable {
     @Column(nullable = false)
+    @JsonProperty
     private String name;
 
     @Column(nullable = false)
+    @JsonProperty
     private String surname;
 
     @Column(nullable = false)
+    @JsonProperty
     private int age;
 }
 

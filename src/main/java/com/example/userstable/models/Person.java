@@ -15,17 +15,16 @@ import lombok.NoArgsConstructor;
 public class Person {
     @EmbeddedId
     private Contact contact;
-    @Column(length = 13)
-    private String phone_number;
+    @Column(name = "phone_number",length = 13)
+    private String phoneNumber;
     @ManyToOne(optional = false)
-    @JoinColumn(name = "city")
     private City city;
 
     @Override
     public String toString() {
         return "Person{" +
                 "nameSurnameAge=" + contact +
-                ", phone_number='" + phone_number + '\'' +
+                ", phone_number='" + phoneNumber + '\'' +
                 ", city=" + city +
                 '}';
     }

@@ -26,7 +26,7 @@ databaseChangeLog:
                   name: phone_number
                   type: varchar(13)
               - column:
-                  name: city
+                  name: city_name
                   type: varchar
                   constraints:
                     nullable: false

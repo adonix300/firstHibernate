@@ -20,6 +20,6 @@ import java.io.Serializable;
 @Table(schema = "hibernate", name = "cities")
 public class City implements Serializable {
     @Id
-    @JsonProperty("name")
+    @JsonProperty
     private String name;
 }
