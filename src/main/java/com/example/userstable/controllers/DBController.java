@@ -24,7 +24,7 @@ public class DBController {
 
     @GetMapping("/by-city")
     List<Person> findPersonsByCity(@Validated City city) {
-        return repository.findAllByCity(city.getName());
+        return repository.findAllByCity(city);
     }
 
     @GetMapping("/by-age")

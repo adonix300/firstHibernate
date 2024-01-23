@@ -14,12 +14,7 @@ import java.util.Optional;
 @Repository
 @Transactional
 public interface PersonRepository extends JpaRepository<Person, Contact> {
-    @Query("SELECT p from Person p where p.city.name= :city")
-    List<Person> findAllByCity(String city);
-
-    @Query("SELECT p FROM Person p where p.contact.age < :age order by p.contact.age asc")
+    List<Person> findAllByCity(City city);
     List<Person> findByContactAgeLessThanOrderByContactAgeAsc(int age);
-
-    @Query("SELECT p FROM Person p where p.contact.name = :name and p.contact.surname = :surname")
     Optional<Person> findByContactNameAndContactSurname(String name, String surname);
 }
